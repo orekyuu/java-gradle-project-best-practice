@@ -20,12 +20,12 @@ tasks.withType<JavaCompile> {
     options.compilerArgs.add("-Xlint:all")
 }
 
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 dependencies {
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testImplementation(platform("org.junit:junit-bom:+"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.assertj:assertj-core:+")
+    testRuntimeOnly(libs.findLibrary("junitEngine").get())
+    testImplementation(libs.findLibrary("junitJupiter").get())
+    testImplementation(libs.findLibrary("assertj").get())
 
-    compileOnly("org.projectlombok:lombok:+")
-    annotationProcessor("org.projectlombok:lombok:+")
+    compileOnly(libs.findLibrary("lombok").get())
+    annotationProcessor(libs.findLibrary("lombok").get())
 }
