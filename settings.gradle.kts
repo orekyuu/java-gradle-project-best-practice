@@ -6,3 +6,4 @@
  */
 
 rootProject.name = "java-gradle-project-best-practice"
+include(":core", ":extensions:base", ":extensions:console")
