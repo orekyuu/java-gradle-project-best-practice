@@ -20,12 +20,11 @@ tasks.withType<JavaCompile> {
     options.compilerArgs.add("-Xlint:all")
 }
 
-val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 dependencies {
-    testRuntimeOnly(libs.findLibrary("junitEngine").get())
-    testImplementation(libs.findLibrary("junitJupiter").get())
-    testImplementation(libs.findLibrary("assertj").get())
+    testRuntimeOnly(libs.junitEngine)
+    testImplementation(libs.junitJupiter.get())
+    testImplementation(libs.assertj.get())
 
-    compileOnly(libs.findLibrary("lombok").get())
-    annotationProcessor(libs.findLibrary("lombok").get())
+    compileOnly(libs.lombok.get())
+    annotationProcessor(libs.lombok)
 }
