@@ -5,5 +5,8 @@
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.5/userguide/building_swift_projects.html in the Gradle documentation.
  */
 
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version("0.7.0")
+}
 rootProject.name = "java-gradle-project-best-practice"
 include(":core", ":extensions:base", ":extensions:console")
