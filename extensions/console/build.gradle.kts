@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":extensions:base"))
+    api(project(":extensions:base"))
 }
