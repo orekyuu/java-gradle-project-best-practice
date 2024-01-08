@@ -4,5 +4,5 @@ plugins {
 
 dependencies {
     implementation(project(":extensions:base"))
-    implementation(project(":extensions:console"))
+    runtimeOnly(project(":extensions:console"))
 }
