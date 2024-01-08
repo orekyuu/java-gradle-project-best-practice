@@ -3,6 +3,12 @@ junit = "5.10.+"
 assertj = "3.25.+"
 lombok = "1.18.+"
 
+# spotbugs
+spotbugs-contrib = "7.6.4"
+spotbugs-core = "4.8.3"
+spotbugs-plugin = "6.0.4"
+findsecbugs = "1.12.0"
+
 [libraries]
 # junit
 junitJupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
@@ -13,3 +19,9 @@ assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
 
 # lombok
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+# spotbugs
+spotbugs-contrib = { module = "com.mebigfatguy.sb-contrib:sb-contrib", version.ref = "spotbugs-contrib" }
+spotbugs-core = { module = "com.github.spotbugs:spotbugs", version.ref = "spotbugs-core" }
+spotbugs-plugin = { module = "com.github.spotbugs.snom:spotbugs-gradle-plugin", version.ref = "spotbugs-plugin" }
+findsecbugs = { module = "com.h3xstream.findsecbugs:findsecbugs-plugin", version.ref = "findsecbugs" }

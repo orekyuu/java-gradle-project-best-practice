@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    id("com.github.spotbugs")
 }
 
 repositories {
@@ -25,9 +26,17 @@ tasks.withType<JavaCompile> {
 
 dependencies {
     testRuntimeOnly(libs.junitEngine)
-    testImplementation(libs.junitJupiter.get())
-    testImplementation(libs.assertj.get())
+    testImplementation(libs.junitJupiter)
+    testImplementation(libs.assertj)
 
-    compileOnly(libs.lombok.get())
+    compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
+
+    spotbugs(libs.spotbugs.core)
+    spotbugsPlugins(libs.spotbugs.contrib)
+    spotbugsPlugins(libs.findsecbugs)
+}
+
+spotbugs {
+    toolVersion = libs.versions.spotbugs.core
 }
