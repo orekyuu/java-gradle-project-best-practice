@@ -1,6 +1,7 @@
 plugins {
     `java-library`
     id("com.github.spotbugs")
+    id("com.diffplug.spotless")
 }
 
 repositories {
@@ -39,4 +40,15 @@ dependencies {
 
 spotbugs {
     toolVersion = libs.versions.spotbugs.core
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        endWithNewline()
+    }
+    format("kts") {
+        target("**/*.kts")
+        endWithNewline()
+    }
 }

@@ -9,6 +9,9 @@ spotbugs-core = "4.8.3"
 spotbugs-plugin = "6.0.6"
 findsecbugs = "1.12.0"
 
+# formatter
+spotless-plugin = "6.23.3"
+
 [libraries]
 # junit
 junitJupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
@@ -25,3 +28,6 @@ spotbugs-contrib = { module = "com.mebigfatguy.sb-contrib:sb-contrib", version.r
 spotbugs-core = { module = "com.github.spotbugs:spotbugs", version.ref = "spotbugs-core" }
 spotbugs-plugin = { module = "com.github.spotbugs.snom:spotbugs-gradle-plugin", version.ref = "spotbugs-plugin" }
 findsecbugs = { module = "com.h3xstream.findsecbugs:findsecbugs-plugin", version.ref = "findsecbugs" }
+
+# formatter
+spotless-plugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless-plugin"}

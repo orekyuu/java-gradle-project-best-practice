@@ -10,4 +10,5 @@ repositories {
 dependencies{
     compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
     implementation(libs.spotbugs.plugin)
+    implementation(libs.spotless.plugin)
 }
