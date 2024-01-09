@@ -3,6 +3,9 @@ plugins {
     id("com.github.spotbugs")
     id("com.diffplug.spotless")
 }
+if (gradle.startParameter.isBuildScan) {
+    throw RuntimeException("--scanは禁止")
+}
 
 repositories {
     mavenCentral()
