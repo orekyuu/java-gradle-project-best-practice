@@ -20,6 +20,15 @@ build.gradleに`implements("org.codehaus.groovy:groovy:3.0.5")`のように宣�
 
 ただし、buildSrc以下では参照できないので`buildSrc/build.gradle.kts`, `buildSrc/settings.gradle.kts`, `buildSrc/src/main/kotlin/VersionCatalog.kt`のような設定を追加で書く必要がある。
 
+## Locking dependency versions
+see: https://docs.gradle.org/current/userguide/dependency_locking.html
+ライブラリのバージョンを固定する仕組み。jsで言うところのpackage-lock.json的なもの。  
+各プロジェクト毎にgradle.lockfileが作られる。  
+複数のプロジェクトにまたがるため、buildSrc以下のConventionPluginに設定を入れている。
+
+lockfile全体を更新する場合は `./gradlew resolveAndLockAll --write-locks` のようにタスクを実行する。  
+ライブラリを指定して更新する場合は`./gradlew resolveAndLockAll --update-locks org.junit:junit-bom`のようにタスクを実行する
+
 ## ConventionPlugin
 see: https://docs.gradle.org/current/samples/sample_convention_plugins.html  
 Gradleで共通の設定を扱うための仕組み。  
