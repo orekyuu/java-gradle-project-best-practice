@@ -1,6 +1,6 @@
 [versions]
 junit = "5.10.+"
-assertj = "3.25.+"
+assertj = "3.26.+"
 lombok = "1.18.+"
 
 # spotbugs
