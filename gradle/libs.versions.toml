@@ -5,7 +5,7 @@ lombok = "1.18.+"
 
 # spotbugs
 spotbugs-contrib = "7.6.4"
-spotbugs-core = "4.8.3"
+spotbugs-core = "4.8.6"
 spotbugs-plugin = "6.0.7"
 findsecbugs = "1.13.0"
 
