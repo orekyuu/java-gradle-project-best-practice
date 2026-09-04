@@ -10,7 +10,7 @@ spotbugs-plugin = "6.0.7"
 findsecbugs = "1.13.0"
 
 # formatter
-spotless-plugin = "6.25.0"
+spotless-plugin = "8.10.2"
 
 [libraries]
 # junit
